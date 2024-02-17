@@ -42,7 +42,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  Post          Post[]
+  // Post          Post[]
   Comment       Comment[]
 }
 
@@ -74,7 +74,7 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   topic    Topic     @relation(fields: [topicId], references: [id])
   comments Comment[]
 }
